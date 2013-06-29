@@ -1,4 +1,8 @@
 dotfiles
 ========
 
-Personal configuration files.
+- .gitconfig
+- .zshrc
+- .vim*
+- .ConEmu
+- Chef deployment?
