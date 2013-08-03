@@ -1,0 +1,15 @@
+[core]
+  excludesfile = ~/.gitignore_global
+[user]
+	email = schmch@gmail.com
+	name = Chris Schmich
+[push]
+	default = simple
+[alias]
+  st = status
+  stat = status
+  ci = commit
+[color]
+	ui = true
+[merge]
+	conflictstyle = diff3

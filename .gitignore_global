@@ -1,0 +1,6 @@
+*.pyc
+*.sw[a-z]
+!*.swf
+.netrwhist
+*.sublime-workspace
+.DS_Store
