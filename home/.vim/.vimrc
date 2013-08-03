@@ -44,12 +44,12 @@ set number
 
 " Automatically reload the vimrc when it is saved.
 augroup vimrchooks
-    au!
-    autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc source %
+  au!
+  autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc source %
 augroup END
 
 " Quick vimrc access.
-:command! Vimrc :sp $USERPROFILE\.vim\.vimrc
+:command! Vimrc :sp ~/.vim/.vimrc
 
 " Allow typos for quit/write commands.
 :command! WQ wq
@@ -119,16 +119,16 @@ autocmd BufRead *.ddc,*.ddcg,*.ddp,*.ddf,*.wxl,*.wxs,*.wxi,*.dds,*.wixproj set s
 
 " Tab autocompletion.
 function! AutocompleteTab(dir)
-      let col = col('.') - 1 
-      if !col || getline('.')[col - 1] !~ '\k' 
-          return "\<tab>" 
-      else 
-          if a:dir == 'f'
-             return "\<c-n>" 
-          else
-             return "\<c-p>" 
-          endif
-      endif 
+  let col = col('.') - 1 
+  if !col || getline('.')[col - 1] !~ '\k' 
+    return "\<tab>" 
+  else 
+    if a:dir == 'f'
+     return "\<c-n>" 
+    else
+     return "\<c-p>" 
+    endif
+  endif 
 endfunction
 
 " 's' for save
@@ -161,4 +161,6 @@ inor <C-S-Tab> <C-O>:tabp<CR>
 vnor J j
 vnor K k
 
-imap <C-V> <C-O>"+gP
+inor <C-V> <C-\><C-O>"+gP
+vnor <C-C> "+y<ESC>
+vnor <C-X> "+x<ESC>
