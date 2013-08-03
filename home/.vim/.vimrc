@@ -135,7 +135,7 @@ endfunction
 no s :w<CR>
 
 " Use Ctrl+J in edit mode to escape back to command mode.
-inor <C-j> <ESC>
+inor <C-J> <ESC>
 
 " Easy move between buffers
 map <S-Left> :bp<CR>
@@ -146,8 +146,6 @@ imap <S-Right> <C-O>:bn<CR>
 " Space and backspace quick edit.
 nnor <BS> hx
 nnor <SPACE> i<SPACE><ESC>
-
-"nnor <C-T> :tabe **/
 
 " Make F12 the same as goto file.
 nnor <F12> gf
@@ -161,6 +159,7 @@ inor <C-S-Tab> <C-O>:tabp<CR>
 vnor J j
 vnor K k
 
+" Standard cut-copy-paste
 inor <C-V> <C-\><C-O>"+gP
 vnor <C-C> "+y<ESC>
 vnor <C-X> "+x<ESC>

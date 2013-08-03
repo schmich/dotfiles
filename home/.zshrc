@@ -5,6 +5,7 @@ bindkey -e
 
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
+autoload -Uz select-word-style && select-word-style bash
 
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%B%d%b'
@@ -41,6 +42,9 @@ clone() {
 
 # Ctrl+Delete: delete word after cursor
 bindkey -M emacs '^[[3;5~' kill-word
+
+# Ctrl+Backspace: delete word before cursor
+bindkey '^?' backward-kill-word
 
 # Ctrl+Arrows: move by word
 bindkey ';5D' emacs-backward-word
