@@ -4,11 +4,11 @@
 	email = schmch@gmail.com
 	name = Chris Schmich
 [push]
-	default = simple
+	default = current
 [alias]
-  st = status
-  stat = status
-  ci = commit
+	st = status
+	stat = status
+	ci = commit
 [color]
 	ui = true
 [merge]
