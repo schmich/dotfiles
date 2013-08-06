@@ -131,8 +131,8 @@ function! AutocompleteTab(dir)
   endif 
 endfunction
 
-" 's' for save
-no s :w<CR>
+" s for save
+no s :update<CR>
 
 " Use Ctrl+J in edit mode to escape back to command mode.
 inor <C-J> <ESC>
