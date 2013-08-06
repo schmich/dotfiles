@@ -156,6 +156,9 @@ nnor <C-S-Tab> :tabp<CR>
 inor <C-Tab> <C-O>:tabn<CR>
 inor <C-S-Tab> <C-O>:tabp<CR>
 
+" Right-click context menu
+mousemodel popup
+
 vnor J j
 vnor K k
 
