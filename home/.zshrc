@@ -44,7 +44,7 @@ clone() {
 bindkey -M emacs '^[[3;5~' kill-word
 
 # Ctrl+Backspace: delete word before cursor
-bindkey '^?' backward-kill-word
+# bindkey '^?' backward-kill-word
 
 # Ctrl+Arrows: move by word
 bindkey ';5D' emacs-backward-word
