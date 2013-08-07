@@ -159,7 +159,8 @@ inor <C-S-Tab> <C-O>:tabp<CR>
 vnor J j
 vnor K k
 
-" Standard cut-copy-paste
-inor <C-V> <C-R><C-R>*
-vnor <C-C> "+y<ESC>
-vnor <C-X> "+x<ESC>
+" Allow intuitive cut-copy-paste.
+vnor <C-X> "+x
+vnor <C-C> "+y
+inor <C-V> <C-O>:set paste<CR><C-R>+<C-O>:set nopaste<CR>
+vnor <C-V> :<C-U>set paste<CR>gvc<C-R>+<C-O>:set nopaste<CR><ESC>
