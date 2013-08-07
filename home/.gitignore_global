@@ -4,3 +4,4 @@
 .netrwhist
 *.sublime-workspace
 .DS_Store
+*.*~
