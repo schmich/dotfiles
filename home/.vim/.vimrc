@@ -49,7 +49,7 @@ augroup vimrchooks
 augroup END
 
 " Quick vimrc access.
-:command! Vimrc :tab ~/.vim/.vimrc
+:command! Vimrc :tabe ~/.vim/.vimrc
 
 " Allow typos for quit/write commands.
 :command! WQ wq
