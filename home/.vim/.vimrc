@@ -49,7 +49,7 @@ augroup vimrchooks
 augroup END
 
 " Quick vimrc access.
-:command! Vimrc :sp ~/.vim/.vimrc
+:command! Vimrc :tab ~/.vim/.vimrc
 
 " Allow typos for quit/write commands.
 :command! WQ wq
@@ -160,6 +160,6 @@ vnor J j
 vnor K k
 
 " Standard cut-copy-paste
-inor <C-V> <C-\><C-O>"+gP
+inor <C-V> <C-R><C-R>*
 vnor <C-C> "+y<ESC>
 vnor <C-X> "+x<ESC>
