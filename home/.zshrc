@@ -14,15 +14,16 @@ zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*' group-name ''
 #zstyle ':completion:*' menu select
 
-setopt auto_cd        # cd by just specifying directory name.
-setopt auto_pushd     # Every cd does pushd
-setopt pushd_silent   # Don't show directory stack after pushd/popd.
-setopt pushd_to_home  # Blank pushd goes home.
+setopt hist_ignore_space  # Leading spaces prevent a command from going into history.
+setopt auto_cd            # cd by just specifying directory name.
+setopt auto_pushd         # Every cd does pushd
+setopt pushd_silent       # Don't show directory stack after pushd/popd.
+setopt pushd_to_home      # Blank pushd goes home.
 unsetopt listambiguous
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # Case-insensitive tab completion.
 
-alias ls="ls --color -h"
+alias ls="ls -G -h"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
@@ -126,3 +127,12 @@ zstyle ':completion:matcher-complete:*' matcher-list 'm:{a-z}={A-Z}'
 
 bindkey '^T' matcher-complete
 #------------------------------------------------------------------------
+
+export PATH=/usr/local/bin:/usr/local/opt/ruby/bin:$PATH
+export PATH=$PATH:/Users/schmich/dev/Sencha/Cmd/4.0.0.203
+export PATH=/usr/local/heroku/bin:$PATH
+export PATH=/Users/schmich/dev/ant/bin:$PATH
+export PATH=/Users/schmich/dev/Android/sdk/tools:/Users/schmich/dev/Android/sdk/platform-tools:$PATH
+
+export ANDROID_HOME=/Users/schmich/dev/Android/sdk
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home

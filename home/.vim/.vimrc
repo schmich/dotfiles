@@ -3,12 +3,12 @@ let g:vim_dir=expand("~/.vim/vimfiles")
 execute "set rtp^=".g:vim_dir
 
 " GUI settings: wider and taller window, solid cursor, hide the toolbar.
-winpos 413 0
 let g:molokai_original=1
 set background=dark
 colorscheme molokai
 set guicursor=a:blinkwait0
 set guioptions-=T
+set guifont=Monaco:h13
 if has("gui_running")
   set lines=79 columns=120
   set cursorline
@@ -90,6 +90,10 @@ autocmd BufRead *.nativeproj set filetype=xml
 autocmd BufRead *.wixproj set filetype=xml
 autocmd BufRead *.config set filetype=xml
 autocmd BufRead *.rake set filetype=ruby
+autocmd BufRead Guardfile set filetype=ruby
+autocmd BufRead Rakefile set filetype=ruby
+autocmd BufRead Gemfile set filetype=ruby
+autocmd BufRead *.json set filetype=javascript
 
 autocmd FileType c,cpp,java,perl,cs set ts=4 formatoptions=cro cindent smarttab tw=0 nowrap sidescroll=20 listchars=extends:$ expandtab
 autocmd FileType php,perl set ts=4 formatoptions=cro smarttab tw=0 nowrap sidescroll=20 listchars=extends:$
