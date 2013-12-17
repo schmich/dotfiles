@@ -93,6 +93,7 @@ autocmd BufRead *.rake set filetype=ruby
 autocmd BufRead Guardfile set filetype=ruby
 autocmd BufRead Rakefile set filetype=ruby
 autocmd BufRead Gemfile set filetype=ruby
+autocmd BufRead *.rabl set filetype=javascript
 autocmd BufRead *.json set filetype=javascript
 
 autocmd FileType c,cpp,java,perl,cs set ts=4 formatoptions=cro cindent smarttab tw=0 nowrap sidescroll=20 listchars=extends:$ expandtab
